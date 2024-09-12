@@ -8,6 +8,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use("/",(req,res)=>{
+  res.send("Hello World");
+})
+
 // News Management Routes
 app.use('/api/v1', newsRoutes);
 
