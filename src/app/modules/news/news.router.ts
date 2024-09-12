@@ -11,3 +11,4 @@ router.delete('/news/:id', NewsController.deleteNews);
 router.patch('/news/:id/publish', NewsController.publishNews);
 
 export default router;
+
