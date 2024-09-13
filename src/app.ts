@@ -8,12 +8,16 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/', (req, res) => {
-  res.send('Hello World');
-});
+// app.use('/', (req, res) => {
+//   res.send('Hello World');
+// });
 
 // News Management Routes
 app.use('/api/v1', newsRoutes);
+
+app.listen(5000, () => {
+  console.log('Server started on port 5000');
+});
 
 // Export the app instead of starting the server
 export default app;
