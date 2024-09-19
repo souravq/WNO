@@ -5,7 +5,21 @@ import newsRoutes from './app/modules/news/news.router';
 
 const app = express();
 
-app.use(cors());
+
+// Configure CORS
+const corsOptions = {
+  origin: [
+      'https://staging.d33iveo2ig7ous.amplifyapp.com',
+      'https://staging.d1o23w9vuaoufu.amplifyapp.com'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
+
+app.options('*', cors(corsOptions));  // Handle preflight requests
+
 app.use(bodyParser.json());
 
 // app.use('/', (req, res) => {
