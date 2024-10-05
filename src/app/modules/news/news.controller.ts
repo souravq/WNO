@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { NewsService } from './news.service';
+import { NewsService } from './news.service.js';
 
 interface ResponseData {
   statusCode: number;

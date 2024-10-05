@@ -1,4 +1,5 @@
-const prisma = require('../../models/prisma');
+//const prisma = require('../../models/prisma.js');
+import prisma from "../../models/prisma.js";
 
 // Create a new news article
 async function createNewsArticle(data:any) {
